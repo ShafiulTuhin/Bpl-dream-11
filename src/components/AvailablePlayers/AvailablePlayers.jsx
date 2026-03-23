@@ -6,7 +6,7 @@ const AvailablePlayers = ({ playersPromise }) => {
   console.log(playersData);
 
   return (
-    <div>
+    <div className="grid md:grid-cols-3 grid-cols-1 py-10 px-5 gap-4">
       {playersData.map((player, index) => (
         <Player key={index} player={player}></Player>
       ))}
