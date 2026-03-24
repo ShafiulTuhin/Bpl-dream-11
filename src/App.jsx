@@ -11,9 +11,10 @@ const fetchPlayers = async () => {
   const fetchJSON = fetchRes.json();
   return fetchJSON;
 };
+const playersPromise = fetchPlayers();
 function App() {
   const [coin, setCoin] = useState("5000000");
-  const playersPromise = fetchPlayers();
+
   return (
     <div className="max-w-[1280px] mx-auto">
       <Navbar coin={coin}></Navbar>

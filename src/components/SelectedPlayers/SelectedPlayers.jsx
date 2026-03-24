@@ -3,14 +3,22 @@ import React from "react";
 import SelectedPlayer from "../SelectedPlayer/SelectedPlayer";
 import { toast } from "react-toastify";
 
-const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
-  console.log(selectedPlayers);
-  const handleDeletePlayer = (playerName) => {
-    setSelectedPlayers(
-      (prev) => prev.filter((player) => player.player_name !== playerName),
-      toast.success(`${playerName} deleted successfully`),
+const SelectedPlayers = ({
+  selectedPlayers,
+  setSelectedPlayers,
+  coin,
+  setCoin,
+}) => {
+  const handleDeletePlayer = (player) => {
+    setSelectedPlayers((prev) =>
+      prev.filter(
+        (selectedPlayer) => selectedPlayer.player_name !== player.player_name,
+      ),
     );
+    setCoin(coin + Number(player.price));
+    toast.success(`${player.player_name} deleted successfully`);
   };
+
   return (
     <>
       {selectedPlayers.length === 0 ? (
@@ -18,12 +26,14 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
           <h2 className="font-bold text-2xl">No Player is selected</h2>
         </div>
       ) : (
-        <div className="mt-5 ">
+        <div className="mt-5 px-4 lg:px-0">
           {selectedPlayers.map((player, index) => (
             <SelectedPlayer
               key={index}
               player={player}
               onDelete={handleDeletePlayer}
+              coin={coin}
+              setCoin={setCoin}
             ></SelectedPlayer>
           ))}
         </div>

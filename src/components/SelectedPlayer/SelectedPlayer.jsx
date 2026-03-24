@@ -19,7 +19,10 @@ const SelectedPlayer = ({ player, onDelete }) => {
           <p className="ml-7">{player_role}</p>
         </div>
       </div>
-      <button onClick={() => onDelete(player_name)} className="cursor-pointer">
+      <button
+        onClick={() => onDelete(player)}
+        className="cursor-pointer text-red-500 bg-slate-300 p-2 rounded-lg"
+      >
         <Trash2 />
       </button>
     </div>

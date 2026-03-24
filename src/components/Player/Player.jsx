@@ -1,5 +1,5 @@
 import { Flag, User } from "lucide-react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Player = ({
   player,
