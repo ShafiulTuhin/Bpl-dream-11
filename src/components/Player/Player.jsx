@@ -34,13 +34,6 @@ const Player = ({
       toast.error(`Not enough balance, need more ${price - coin}$`);
       return;
     }
-
-    const existing = selectedPlayers.some(
-      (selected) => selected.player_name === player.player_name,
-    );
-    if (!existing) {
-      setSelectedPlayers([...selectedPlayers, player]);
-    }
   };
 
   return (

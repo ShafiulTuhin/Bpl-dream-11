@@ -1,14 +1,11 @@
 import { Trash2, User } from "lucide-react";
-import React from "react";
 
-const SelectedPlayer = ({ player, selectedPlayers, onDelete }) => {
-  console.log(selectedPlayers);
-
+const SelectedPlayer = ({ player, onDelete }) => {
   const { player_image, player_name, player_role } = player;
 
   return (
     <div className="flex justify-between items-center border-2 border-slate-400 p-2 mb-4 rounded-lg">
-      <div className="flex  ">
+      <div className="flex">
         <img
           src={player_image}
           alt={player_image}

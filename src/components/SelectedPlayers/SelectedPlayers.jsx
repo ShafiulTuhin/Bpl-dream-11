@@ -14,16 +14,23 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
     );
   };
   return (
-    <div className="mt-5 ">
-      {selectedPlayers.map((player, index) => (
-        <SelectedPlayer
-          key={index}
-          player={player}
-          selectedPlayers={selectedPlayers}
-          onDelete={handleDeletePlayer}
-        ></SelectedPlayer>
-      ))}
-    </div>
+    <>
+      {selectedPlayers.length === 0 ? (
+        <div className="text-center py-15">
+          <h2 className="font-bold text-2xl">No Player is selected</h2>
+        </div>
+      ) : (
+        <div className="mt-5 ">
+          {selectedPlayers.map((player, index) => (
+            <SelectedPlayer
+              key={index}
+              player={player}
+              onDelete={handleDeletePlayer}
+            ></SelectedPlayer>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
