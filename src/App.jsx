@@ -3,6 +3,7 @@ import "./App.css";
 import AvailablePlayers from "./components/AvailablePlayers/AvailablePlayers";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import Players from "./components/Players/Players";
 
 const fetchPlayers = async () => {
   const url = "/players.json";
@@ -16,8 +17,8 @@ function App() {
     <div className="max-w-[1280px] mx-auto">
       <Navbar></Navbar>
       <Hero></Hero>
-      <Suspense fallback={<h3>Loading...</h3>}>
-        <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
+      <Suspense>
+        <Players playersPromise={playersPromise}></Players>
       </Suspense>
     </div>
   );

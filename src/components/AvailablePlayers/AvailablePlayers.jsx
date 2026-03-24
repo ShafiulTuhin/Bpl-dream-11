@@ -1,13 +1,9 @@
-import React, { use } from "react";
 import Player from "../Player/Player";
 
-const AvailablePlayers = ({ playersPromise }) => {
-  const playersData = use(playersPromise);
-  console.log(playersData);
-
+const AvailablePlayers = ({ players }) => {
   return (
-    <div className="grid md:grid-cols-3 grid-cols-1 py-10 px-5 gap-4">
-      {playersData.map((player, index) => (
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-5 px-5 gap-4">
+      {players.map((player, index) => (
         <Player key={index} player={player}></Player>
       ))}
     </div>

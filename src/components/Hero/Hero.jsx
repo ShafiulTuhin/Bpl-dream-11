@@ -8,7 +8,7 @@ const Hero = () => {
         <h1 className="md:text-4xl text-3xl font-bold text-white text-center">
           Assemble Your Ultimate Dream 11 Cricket Team
         </h1>
-        <p className="font-medium text-2xl text-[#ffffff70]">
+        <p className="font-medium text-2xl text-[#ffffff70] text-center">
           Beyond Boundaries Beyond Limits
         </p>
         <div className="border border-[#E7FE29] p-1 rounded-lg">

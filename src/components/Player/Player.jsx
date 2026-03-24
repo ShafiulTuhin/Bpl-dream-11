@@ -13,13 +13,17 @@ const Player = ({ player }) => {
     price,
   } = player;
   return (
-    <div className="w-[376px] border border-slate-200 p-3 rounded-lg bg-slate-200 ">
-      <img src={player_image} alt="" className="w-full h-[300px] rounded-lg" />
+    <div className="md:w-[376px] w-full border border-slate-200 p-3 rounded-lg bg-slate-200 ">
+      <img
+        src={player_image}
+        alt={player_image}
+        className="w-full h-[300px] rounded-lg"
+      />
       <div className="flex items-center gap-4">
         <span>
           <User size={24} />
         </span>
-        <h2 className="font-semibold text-[#131313] text-[20px] py-5">
+        <h2 className="font-semibold text-[#131313] text-[20px] py-3">
           {player_name}
         </h2>
       </div>
@@ -42,7 +46,7 @@ const Player = ({ player }) => {
         <h2>
           Price: <span>{price}</span>
         </h2>
-        <button className="btn">Choose Player</button>
+        <button className="btn bg-slate-100">Choose Player</button>
       </div>
     </div>
   );
