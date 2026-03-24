@@ -1,5 +1,4 @@
 import { Flag, User } from "lucide-react";
-import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
 const Player = ({
@@ -31,8 +30,6 @@ const Player = ({
       toast.success(`${player_name} is selected.`);
       setSelectedPlayers([...selectedPlayers, player]);
       setCoin(coin - price);
-
-      // setIsSelected(true);
     } else {
       toast.error(`Not enough balance, need more ${price - coin}$`);
       return;
@@ -43,10 +40,6 @@ const Player = ({
     );
     if (!existing) {
       setSelectedPlayers([...selectedPlayers, player]);
-      toast.success(`${player_name} is added!`);
-    } else {
-      toast.error(`${player_name} already added!`);
-      return;
     }
   };
 

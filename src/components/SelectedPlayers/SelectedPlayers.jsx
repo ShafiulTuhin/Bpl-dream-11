@@ -1,13 +1,27 @@
 import React from "react";
-import Player from "../Player/Player";
 
-const SelectedPlayers = ({ selectedPlayers }) => {
+import SelectedPlayer from "../SelectedPlayer/SelectedPlayer";
+import { toast } from "react-toastify";
+
+const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
   console.log(selectedPlayers);
-
+  const handleDeletePlayer = (playerName) => {
+    setSelectedPlayers((prev) =>
+      prev.filter(
+        (player) => player.player_name !== playerName,
+        toast.success(`${playerName} deleted successfully`),
+      ),
+    );
+  };
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-5 px-5 gap-4">
+    <div className="mt-5 ">
       {selectedPlayers.map((player, index) => (
-        <Player key={index} player={player}></Player>
+        <SelectedPlayer
+          key={index}
+          player={player}
+          selectedPlayers={selectedPlayers}
+          onDelete={handleDeletePlayer}
+        ></SelectedPlayer>
       ))}
     </div>
   );

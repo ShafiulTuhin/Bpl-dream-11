@@ -1,10 +1,8 @@
 import { Suspense, useState } from "react";
 import "./App.css";
-import AvailablePlayers from "./components/AvailablePlayers/AvailablePlayers";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Players from "./components/Players/Players";
-import { Section } from "lucide-react";
 
 const fetchPlayers = async () => {
   const url = "/players.json";
