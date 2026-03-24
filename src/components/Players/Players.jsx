@@ -10,11 +10,11 @@ const Players = ({ playersPromise, coin, setCoin }) => {
     <>
       <div className="sm:flex justify-between items-center mt-5  px-4">
         {selectedType === "available" ? (
-          <h2 className="font-bold lg:text-2xl sm:text-start text-center sm:mb-0 mb-4">
+          <h2 className="font-bold lg:text-[20px] sm:text-start text-center sm:mb-0 mb-4">
             Available Players
           </h2>
         ) : (
-          <h2 className="font-bold lg:text-2xl sm:text-start text-center sm:mb-0 mb-4">
+          <h2 className="font-bold lg:text-[20px] sm:text-start text-center sm:mb-0 mb-4">
             Selected Players ({`${selectedPlayers.length} of ${players.length}`}
             )
           </h2>

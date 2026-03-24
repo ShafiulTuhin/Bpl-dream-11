@@ -11,7 +11,7 @@ const SelectedPlayer = ({ player, onDelete }) => {
           alt={player_image}
           className="w-[50px] h-[50px]"
         />
-        <div>
+        <div className="ml-2">
           <div className="flex gap-2 items-center ">
             <User size={20} />
             <span>{player_name}</span>
@@ -21,7 +21,7 @@ const SelectedPlayer = ({ player, onDelete }) => {
       </div>
       <button
         onClick={() => onDelete(player)}
-        className="cursor-pointer text-red-500 bg-slate-300 p-2 rounded-lg"
+        className="cursor-pointer text-yellow-500 bg-slate-300 p-2 rounded-lg"
       >
         <Trash2 />
       </button>
