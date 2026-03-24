@@ -27,9 +27,9 @@ const Player = ({
     const newCoin = coin - price;
 
     if (newCoin >= 0) {
-      toast.success(`${player_name} is selected.`);
       setSelectedPlayers([...selectedPlayers, player]);
       setCoin(coin - price);
+      toast.success(`${player_name} is selected.`);
     } else {
       toast.error(`Not enough balance, need more ${price - coin}$`);
       return;
@@ -78,7 +78,6 @@ const Player = ({
           {isSelected ? "Selected" : "Choose Player"}
         </button>
       </div>
-      <ToastContainer />
     </div>
   );
 };

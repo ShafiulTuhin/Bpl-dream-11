@@ -6,11 +6,9 @@ import { toast } from "react-toastify";
 const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers }) => {
   console.log(selectedPlayers);
   const handleDeletePlayer = (playerName) => {
-    setSelectedPlayers((prev) =>
-      prev.filter(
-        (player) => player.player_name !== playerName,
-        toast.success(`${playerName} deleted successfully`),
-      ),
+    setSelectedPlayers(
+      (prev) => prev.filter((player) => player.player_name !== playerName),
+      toast.success(`${playerName} deleted successfully`),
     );
   };
   return (

@@ -3,6 +3,7 @@ import "./App.css";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Players from "./components/Players/Players";
+import { ToastContainer } from "react-toastify";
 
 const fetchPlayers = async () => {
   const url = "/players.json";
@@ -24,6 +25,7 @@ function App() {
           setCoin={setCoin}
         ></Players>
       </Suspense>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
