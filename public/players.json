@@ -7,7 +7,7 @@
     "rating": 9.4,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm medium",
-    "price": "$1523000"
+    "price": "152300"
   },
   {
     "player_image": "https://i.ibb.co.com/vC8s2JDN/babar-azam.jpg",
@@ -17,7 +17,7 @@
     "rating": 9.1,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm offbreak",
-    "price": "$1394500"
+    "price": "1394500"
   },
   {
     "player_image": "https://i.ibb.co.com/xtj2dL6Y/Ben-Stokes.jpg",
@@ -27,7 +27,7 @@
     "rating": 8.9,
     "batting_style": "Left-hand bat",
     "bowling_style": "Right-arm fast-medium",
-    "price": "$1612000"
+    "price": "1612000"
   },
   {
     "player_image": "https://i.ibb.co.com/cS4Mv1rf/Kane-Williamson.jpg",
@@ -37,7 +37,7 @@
     "rating": 9.0,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm offbreak",
-    "price": "$1337800"
+    "price": "1337800"
   },
   {
     "player_image": "https://i.ibb.co.com/NgYpRdtJ/Shakib-AL-Hasan.jpg",
@@ -47,7 +47,7 @@
     "rating": 9.2,
     "batting_style": "Left-hand bat",
     "bowling_style": "Left-arm orthodox",
-    "price": "$1468900"
+    "price": "1468900"
   },
   {
     "player_image": "https://i.ibb.co.com/dsHnBS3p/Mitchel-Starck.jpg",
@@ -57,7 +57,7 @@
     "rating": 8.7,
     "batting_style": "Left-hand bat",
     "bowling_style": "Left-arm fast",
-    "price": "$1379200"
+    "price": "1379200"
   },
   {
     "player_image": "https://i.ibb.co.com/LdbMNkCc/Joe-Root.jpg",
@@ -67,7 +67,7 @@
     "rating": 9.0,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm offbreak",
-    "price": "$1379200"
+    "price": "1379200"
   },
   {
     "player_image": "https://i.ibb.co.com/rfzrKp6L/Steve-Smith.jpg",
@@ -77,7 +77,7 @@
     "rating": 9.3,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm legbreak",
-    "price": "$1493300"
+    "price": "1493300"
   },
   {
     "player_image": "https://i.ibb.co.com/Jj8LyLqZ/Jasprit-Bumrah.jpg",
@@ -87,7 +87,7 @@
     "rating": 9.2,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm fast",
-    "price": "$1436700"
+    "price": "1436700"
   },
   {
     "player_image": "https://i.ibb.co.com/67JGhMXD/Trent-Boult.jpg",
@@ -97,7 +97,7 @@
     "rating": 8.8,
     "batting_style": "Right-hand bat",
     "bowling_style": "Left-arm fast-medium",
-    "price": "$1248900"
+    "price": "1248900"
   },
   {
     "player_image": "https://i.ibb.co.com/8nZQZZSc/Hadrik-Pandya.jpg",
@@ -107,7 +107,7 @@
     "rating": 8.9,
     "batting_style": "Right-hand bat",
     "bowling_style": "Right-arm fast-medium",
-    "price": "$1365400"
+    "price": "1365400"
   },
   {
     "player_image": "https://i.ibb.co.com/v4XsnXZp/David-Warner.jpg",
@@ -117,6 +117,6 @@
     "rating": 9.0,
     "batting_style": "Left-hand bat",
     "bowling_style": "Right-arm legbreak",
-    "price": "$1352100"
+    "price": "1352100"
   }
 ]

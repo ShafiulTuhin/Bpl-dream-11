@@ -1,7 +1,18 @@
 import { Flag, User } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
-const Player = ({ player }) => {
+const Player = ({
+  player,
+  coin,
+  setCoin,
+  selectedPlayers,
+  setSelectedPlayers,
+}) => {
+  // const [isSelected, setIsSelected] = useState(false);
+  const isSelected = (selectedPlayers || []).some(
+    (selected) => selected.player_name === player.player_name,
+  );
   const {
     player_image,
     player_name,
@@ -12,6 +23,33 @@ const Player = ({ player }) => {
     bowling_style,
     price,
   } = player;
+
+  const handleSelectedPlayer = () => {
+    const newCoin = coin - price;
+
+    if (newCoin >= 0) {
+      toast.success(`${player_name} is selected.`);
+      setSelectedPlayers([...selectedPlayers, player]);
+      setCoin(coin - price);
+
+      // setIsSelected(true);
+    } else {
+      toast.error(`Not enough balance, need more ${price - coin}$`);
+      return;
+    }
+
+    const existing = selectedPlayers.some(
+      (selected) => selected.player_name === player.player_name,
+    );
+    if (!existing) {
+      setSelectedPlayers([...selectedPlayers, player]);
+      toast.success(`${player_name} is added!`);
+    } else {
+      toast.error(`${player_name} already added!`);
+      return;
+    }
+  };
+
   return (
     <div className="md:w-[376px] w-full border border-slate-200 p-3 rounded-lg bg-slate-200 ">
       <img
@@ -46,8 +84,15 @@ const Player = ({ player }) => {
         <h2>
           Price: <span>{price}</span>
         </h2>
-        <button className="btn bg-slate-100">Choose Player</button>
+        <button
+          disabled={isSelected}
+          onClick={handleSelectedPlayer}
+          className="btn bg-slate-100"
+        >
+          {isSelected ? "Selected" : "Choose Player"}
+        </button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
